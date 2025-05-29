@@ -1,0 +1,4 @@
+ { name: 'Building Blocks', price: '₱150/month', img: 'images/bblocks.jpg' },
+        { name: 'Toy Car Set', price: '₱100/month', img: 'images/tcars.jpg' },
+        { name: 'Puzzle Board', price: '₱120/month', img: 'images/puzzles.jpg' },
+        { name: 'Doll House', price: '₱200/month', img: 'images/dhouse.jpg' }

@@ -123,8 +123,31 @@ p,
     object-fit: cover;
 }
 
+.about-card {
+    background-color: #C6E7FF;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    min-height: 300px;
+}
+
+.about-card .card-body {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+
 .toy-card:hover,
-.plan-card:hover {
+.plan-card:hover,
+.about-card:hover {
     transform: scale(1.05);
 }
 
@@ -140,7 +163,7 @@ p,
 }
 
 .contact-form {
-    background-color: white;
+    background-color: #E2E8F0;
     border-radius: 10px;
 }
 
@@ -181,11 +204,13 @@ p,
         min-height: 120px;
     }
 
-    .plan-card {
+    .plan-card,
+    .about-card {
         min-height: 280px;
     }
 
-    .plan-card .card-body {
+    .plan-card .card-body,
+    .about-card .card-body {
         min-height: 180px;
     }
 
