@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Populate toy list
     const toys = [
-        { name: 'Building Blocks', price: '₱150/month', img: 'https://via.placeholder.com/300x200?text=Blocks' },
-        { name: 'Toy Car Set', price: '₱100/month', img: 'https://via.placeholder.com/300x200?text=Cars' },
-        { name: 'Puzzle Board', price: '₱120/month', img: 'https://via.placeholder.com/300x200?text=Puzzle' },
-        { name: 'Doll House', price: '₱200/month', img: 'https://via.placeholder.com/300x200?text=Doll+House' }
+        { name: 'Building Blocks', price: '₱150/month', img: 'images/bblocks.jpg' },
+        { name: 'Toy Car Set', price: '₱100/month', img: 'images/tcars.jpg' },
+        { name: 'Puzzle Board', price: '₱120/month', img: 'images/puzzles.jpg' },
+        { name: 'Doll House', price: '₱200/month', img: 'images/dhouse.jpg' }
     ];
 
     const toyList = document.getElementById('toy-list');

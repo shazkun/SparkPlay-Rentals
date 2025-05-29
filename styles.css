@@ -12,11 +12,13 @@ body {
     z-index: 1000;
 }
 
-.navbar-brand, .nav-link {
+.navbar-brand,
+.nav-link {
     color: #2D3748 !important;
 }
 
-.navbar-brand:hover, .nav-link:hover {
+.navbar-brand:hover,
+.nav-link:hover {
     color: #FFDDAE !important;
 }
 
@@ -26,7 +28,8 @@ body {
     margin-right: 10px;
 }
 
-section, footer {
+section,
+footer {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -59,7 +62,13 @@ footer {
     background-color: #D4F6FF;
 }
 
-h1, h2, h3, h4, p, .card-title, .card-text {
+h1,
+h2,
+h3,
+h4,
+p,
+.card-title,
+.card-text {
     color: #2D3748;
 }
 
@@ -76,22 +85,47 @@ h1, h2, h3, h4, p, .card-title, .card-text {
     color: #2D3748;
 }
 
-.toy-card, .plan-card {
+.plan-card {
     background-color: #C6E7FF;
     border: none;
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s;
+    min-height: 300px;
 }
 
-.toy-card:hover, .plan-card:hover {
-    transform: scale(1.05);
+.plan-card .card-body {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.toy-card {
+    background-color: #C6E7FF;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    min-height: 350px;
+}
+
+.toy-card .card-body {
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .toy-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
+}
+
+.toy-card:hover,
+.plan-card:hover {
+    transform: scale(1.05);
 }
 
 .form-control {
@@ -103,6 +137,11 @@ h1, h2, h3, h4, p, .card-title, .card-text {
 .form-control::placeholder {
     color: #718096;
     opacity: 0.7;
+}
+
+.contact-form {
+    background-color: white;
+    border-radius: 10px;
 }
 
 /* Scroll Animation */
@@ -119,14 +158,38 @@ h1, h2, h3, h4, p, .card-title, .card-text {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    section, footer {
+
+    section,
+    footer {
         padding-top: 60px;
         min-height: 100vh;
     }
+
     .container {
         padding: 20px;
     }
+
     .toy-card img {
         height: 150px;
+    }
+
+    .toy-card {
+        min-height: 300px;
+    }
+
+    .toy-card .card-body {
+        min-height: 120px;
+    }
+
+    .plan-card {
+        min-height: 280px;
+    }
+
+    .plan-card .card-body {
+        min-height: 180px;
+    }
+
+    .contact-form {
+        padding: 15px;
     }
 }
