@@ -1,0 +1,132 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #2D3748;
+    background-color: #D4F6FF;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.navbar {
+    background-color: #C6E7FF;
+    z-index: 1000;
+}
+
+.navbar-brand, .nav-link {
+    color: #2D3748 !important;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: #FFDDAE !important;
+}
+
+.logo-img {
+    max-height: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+section, footer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 70px;
+    box-sizing: border-box;
+}
+
+.hero-section {
+    background-color: #C6E7FF;
+}
+
+#services {
+    background-color: #D4F6FF;
+}
+
+#toys {
+    background-color: #C6E7FF;
+}
+
+.about-section {
+    background-color: #D4F6FF;
+}
+
+#contact {
+    background-color: #C6E7FF;
+}
+
+footer {
+    background-color: #D4F6FF;
+}
+
+h1, h2, h3, h4, p, .card-title, .card-text {
+    color: #2D3748;
+}
+
+.btn-custom {
+    background-color: #FFDDAE;
+    color: #2D3748;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.btn-custom:hover {
+    background-color: #e6c69c;
+    color: #2D3748;
+}
+
+.toy-card, .plan-card {
+    background-color: #C6E7FF;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.toy-card:hover, .plan-card:hover {
+    transform: scale(1.05);
+}
+
+.toy-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.form-control {
+    background-color: #C6E7FF;
+    color: #2D3748;
+    border: 1px solid #FFDDAE;
+}
+
+.form-control::placeholder {
+    color: #718096;
+    opacity: 0.7;
+}
+
+/* Scroll Animation */
+.animate-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    section, footer {
+        padding-top: 60px;
+        min-height: 100vh;
+    }
+    .container {
+        padding: 20px;
+    }
+    .toy-card img {
+        height: 150px;
+    }
+}
