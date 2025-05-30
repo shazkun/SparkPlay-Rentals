@@ -65,3 +65,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+// Get modal elements
+const modal = document.getElementById('imageModal');
+const modalTitle = document.getElementById('modalPlanTitle');
+const modalImage = document.getElementById('modalPlanImage');
+const closeBtn = modal.querySelector('.close');
+
+// Attach click events to all buttons with class "choosePlanBtn"
+document.querySelectorAll('.choosePlanBtn').forEach(button => {
+  button.addEventListener('click', function(e) {
+    e.preventDefault(); // Prevent default link behavior
+
+    const plan = this.getAttribute('data-plan');
+    const imgSrc = this.getAttribute('data-img');
+
+    // Set modal content
+    modalTitle.textContent = plan;
+    modalImage.src = imgSrc;
+    modalImage.alt = plan + ' Image';
+
+    // Show modal
+    modal.style.display = 'flex';
+  });
+});
+
+// Close modal when clicking "x"
+closeBtn.onclick = function() {
+  modal.style.display = 'none';
+}
+
+// Close modal when clicking outside the modal content
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
+}

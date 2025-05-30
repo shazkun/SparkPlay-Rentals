@@ -48,54 +48,73 @@
     <section id="home" class="hero-section text-center animate-section">
         <div class="container d-flex flex-column justify-content-center align-items-center h-100">
             <h1 class="display-4">SparkPlay Rentals</h1>
-            <p class="lead">Accessible, eco-friendly, and enriching toy rentals for kids aged 0–8.</p>
+            <p class="lead text-white">Accessible, eco-friendly, and enriching toy rentals for kids aged 0–8.</p>
             <a href="#services" class="btn btn-custom">Explore Plans</a>
         </div>
     </section>
 
     <!-- Services Section -->
+
     <section id="services" class="py-5 animate-section">
         <div class="container d-flex flex-column justify-content-center align-items-center h-100">
-            <h2 class="text-center mb-4">Our Subscription Plans</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card plan-card text-center h-100">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Starter Plan</h5>
-                            <p class="card-text">₱150/month</p>
-                            <p class="flex-grow-1">4 curated, pre-loved toys delivered monthly.</p>
-                            <a href="#" class="btn btn-custom mt-auto">Choose Plan</a>
-                        </div>
-                    </div>
+          <h2 class="text-center mb-4">Our Subscription Plans</h2>
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <div class="card plan-card text-center h-100">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Starter Plan</h5>
+                  <p class="card-text">₱150/month</p>
+                  <p class="flex-grow-1">4 curated, pre-loved toys delivered monthly.</p>
+                  <a href="#" class="btn btn-custom mt-auto choosePlanBtn" 
+                     data-plan="Starter Plan" 
+                     data-img="images/qrnibert.jpeg">Choose Plan</a>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card plan-card text-center h-100">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Standard Plan</h5>
-                            <p class="card-text">₱300/month</p>
-                            <p class="flex-grow-1">6 curated toys tailored to your child’s needs.</p>
-                            <a href="#" class="btn btn-custom mt-auto">Choose Plan</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card plan-card text-center h-100">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Premium Plan</h5>
-                            <p class="card-text">₱500/month</p>
-                            <p class="flex-grow-1">8 toys + 1 seasonal toy, fully customizable.</p>
-                            <a href="#" class="btn btn-custom mt-auto">Choose Plan</a>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <div class="text-center mt-4">
-                <p>Additional Services: Toy customization, expert recommendations, and seasonal add-ons.</p>
-                <p>Coming Soon: Mobile app, themed learning bundles, party kits, and gift subscriptions!</p>
+      
+            <div class="col-md-4 mb-4">
+              <div class="card plan-card text-center h-100">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Standard Plan</h5>
+                  <p class="card-text">₱300/month</p>
+                  <p class="flex-grow-1">6 curated toys tailored to your child’s needs.</p>
+                  <a href="#" class="btn btn-custom mt-auto choosePlanBtn" 
+                     data-plan="Standard Plan" 
+                     data-img="images/qrnibert.jpeg">Choose Plan</a>
+                </div>
+              </div>
             </div>
+      
+            <div class="col-md-4 mb-4">
+              <div class="card plan-card text-center h-100">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Premium Plan</h5>
+                  <p class="card-text">₱500/month</p>
+                  <p class="flex-grow-1">8 toys + 1 seasonal toy, fully customizable.</p>
+                  <a href="#" class="btn btn-custom mt-auto choosePlanBtn" 
+                     data-plan="Premium Plan" 
+                     data-img="images/qrnibert.jpeg">Choose Plan</a>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="text-center mt-4">
+            <p>Additional Services: Toy customization, expert recommendations, and seasonal add-ons.</p>
+            <p>Coming Soon: Mobile app, themed learning bundles, party kits, and gift subscriptions!</p>
+          </div>
         </div>
-    </section>
-
+      </section>
+      
+      <!-- Modal (Place at end of body) -->
+      <div id="imageModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3 id="modalPlanTitle"></h3>
+          <img id="modalPlanImage" src="" alt="Plan Image" />
+        </div>
+      </div>
+  
     <!-- Toys Section -->
     <section id="toys" class="py-5 animate-section">
         <div class="container d-flex flex-column justify-content-center align-items-center h-100">
