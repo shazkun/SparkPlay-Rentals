@@ -1,0 +1,291 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #2D3748;
+    background-color: #D4F6FF;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.navbar {
+    background-color: #C6E7FF;
+    z-index: 1000;
+}
+
+.navbar-brand,
+.nav-link {
+    color: #2D3748 !important;
+}
+
+.navbar-brand:hover,
+.nav-link:hover {
+    color: #FFDDAE !important;
+}
+
+.logo-img {
+    max-height: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+section,
+footer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 70px;
+    box-sizing: border-box;
+}
+
+.hero-section {
+    position: relative;
+    background: url("images/background.png") no-repeat center center;
+    background-size: cover;
+    color: white;
+    /* Makes text stand out */
+    z-index: 1;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* Dark overlay */
+    z-index: -1;
+}
+
+
+.modal {
+    display: none;
+    /* This hides the modal when the page loads */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+.modal-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+
+#services {
+    background-color: #D4F6FF;
+}
+
+#toys {
+    background-color: #C6E7FF;
+}
+
+.about-section {
+    background-color: #D4F6FF;
+}
+
+#contact {
+    background-color: #C6E7FF;
+}
+
+footer {
+    background-color: #D4F6FF;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+.card-title,
+.card-text {
+    color: #2D3748;
+}
+
+.btn-custom {
+    background-color: #FFDDAE;
+    color: #2D3748;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.btn-custom:hover {
+    background-color: #e6c69c;
+    color: #2D3748;
+}
+
+.plan-card {
+    background-color: #C6E7FF;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    min-height: 300px;
+}
+
+.plan-card .card-body {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.display-4 {
+    color: #ffd838
+}
+
+.toy-card {
+    background-color: #C6E7FF;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    min-height: 350px;
+}
+
+.toy-card .card-body {
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.toy-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.about-card {
+    background-color: #C6E7FF;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    min-height: 300px;
+}
+
+.about-card .card-body {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.toy-card:hover,
+.plan-card:hover,
+.about-card:hover {
+    transform: scale(1.05);
+}
+
+.form-control {
+    background-color: #C6E7FF;
+    color: #2D3748;
+    border: 1px solid #FFDDAE;
+}
+
+.form-control::placeholder {
+    color: #718096;
+    opacity: 0.7;
+}
+
+.contact-form {
+    background-color: #E2E8F0;
+    border-radius: 10px;
+}
+
+/* Scroll Animation */
+.animate-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+    section,
+    footer {
+        padding-top: 60px;
+        min-height: 100vh;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .toy-card img {
+        height: 150px;
+    }
+
+    .toy-card {
+        min-height: 300px;
+    }
+
+    .toy-card .card-body {
+        min-height: 120px;
+    }
+
+    .plan-card,
+    .about-card {
+        min-height: 280px;
+    }
+
+    .plan-card .card-body,
+    .about-card .card-body {
+        min-height: 180px;
+    }
+
+    .contact-form {
+        padding: 15px;
+    }
+}
